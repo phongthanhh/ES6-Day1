@@ -1,0 +1,5 @@
+const avg = (...res) => {
+
+}
+
+average

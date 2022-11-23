@@ -8,7 +8,6 @@ const loadBtn = () => {
 }
 loadBtn()
 const getAllBtn = document.querySelectorAll('.color-button')
-
 getAllBtn.forEach(btn => {
     btn.onclick = function() {
         resetActive();

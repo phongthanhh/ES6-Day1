@@ -8,15 +8,14 @@ const loadBtn = () => {
 }
 loadBtn()
 const getAllBtn = document.querySelectorAll('.color-button')
-
 getAllBtn.forEach(btn => {
     btn.onclick = function() {
         resetActive();
         this.classList.add('active')
         this.className.split(' ').forEach(item => {
             colorList.forEach(color => {
+                document.querySelector('.house').classList = 'house'
                 if (color === item) {
-                    document.querySelector('.house').className = 'house'
                     document.querySelector('.house').classList.toggle(item)
                 }
             })

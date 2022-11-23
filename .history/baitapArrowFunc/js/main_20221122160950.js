@@ -1,4 +1,5 @@
 const colorList = ['pallet', 'viridian', 'pewter', 'cerulean', 'vermillion', 'lavender', 'celadon', 'saffron', 'fuschia', 'cinnabar'];
+const getAllBtn = document.querySelectorAll('.color-button')
 const loadBtn = () => {
     let btn = ''
     colorList.forEach(color => {
@@ -7,7 +8,6 @@ const loadBtn = () => {
     document.querySelector('#colorContainer').innerHTML = btn
 }
 loadBtn()
-const getAllBtn = document.querySelectorAll('.color-button')
 
 getAllBtn.forEach(btn => {
     btn.onclick = function() {
@@ -16,7 +16,7 @@ getAllBtn.forEach(btn => {
         this.className.split(' ').forEach(item => {
             colorList.forEach(color => {
                 if (color === item) {
-                    document.querySelector('.house').className = 'house'
+                    document.querySelector('.house').classList = 'house'
                     document.querySelector('.house').classList.toggle(item)
                 }
             })
